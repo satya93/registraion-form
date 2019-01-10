@@ -1,0 +1,42 @@
+<style>
+    input.ng-valid{
+        color:green;
+
+    }
+    input.ng-invalid{
+        color:red;
+    
+    }
+    input{
+        color:silver;
+    }
+</style>
+<form #fm="ngForm">
+    Firstname: <input type="text" name="t1" [(ngModel)]="txt1" required #c1="ngModel">
+    <span *ngIf="c1.touched && c1.invalid"> Firstname</span>
+
+    <br><br>
+    Middlename: <input type="text" name="t2" [(ngModel)]="txt2" required #c2="ngModel">
+     
+<br><br>
+Lastname: <input type="text" name="t3" [(ngModel)]="txt3" required #c3="ngModel" >
+<span *ngIf="c3.touched && c3.invalid">Lastname</span>
+<span style="color:Red " *ngIf=" c3.errors && c3.errors.pattern">Only numbers</span>
+<br><br>
+
+Email: <input type="text" name="t4" [(ngModel)]="txt4" required #c4="ngModel" >
+<span *ngIf="c4.touched && c4.invalid">Email</span>
+<br><br>
+
+Mobile Number: <input type="text" name="t5" [(ngModel)]="txt5" required #c5="ngModel" >
+<br><br>
+
+Password: <input type="password" name="t6" [(ngModel)]="txt6" required #c6="ngModel" >
+<span *ngIf="c6.touched && c6.invalid">Password</span>
+<br><br>
+Confirm Password: <input type="password" name="t7" [(ngModel)]="txt7" required #c7="ngModel" >
+<span *ngIf="c7.touched && c7.invalid">Confirm Password</span>
+<br><br>
+<a routerLink="/login" input type="button" (click)="funregis(fm)"> Register</a>
+
+</form>

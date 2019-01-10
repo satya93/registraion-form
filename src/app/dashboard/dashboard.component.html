@@ -1,0 +1,21 @@
+<table border='1'>
+  <th>ID</th>
+  <th>Name</th>
+  <th>Email</th>
+  <th>Class</th>
+  <th>Year</th>
+  <th>City</th>
+  <th>Country</th>
+  <tr *ngFor="let row of Student">
+    <td>{{row.ID}}</td>
+    <td>{{row.Name}}</td>
+    <td>{{row.Email}}</td>
+    <td>{{row.Class}}</td>
+    <td>{{row.Year}}</td>
+    <td>{{row.City}}</td>
+    <td>{{row.Coutry}}</td>
+    <td><input type="button" value="Edit">
+      <input type="button" value="Delete">
+    </td>
+  </tr>
+</table>
